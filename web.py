@@ -1,11 +1,7 @@
-
-
 import streamlit as st
 from PIL import Image
 
-
 # st.set_page_config(page_title="Portfolio", layout="wide")
-
 
 col1, col2 = st.columns([2, 3.8])  # Menentukan lebar kolom
 
@@ -29,96 +25,92 @@ with col2:
         if st.button("Skills"):
             st.write("Skills page clicked!")
     with col4:
-        if st.button("Projec"):
-            st.write("Services page clicked!")
+        if st.button("Project"):
+            st.write("Projects page clicked!")
     with col5:
         if st.button("Contact"):
             st.write("Contact Us page clicked!")
+            
 st.markdown('___')
 
-
-# Konten lain di bawah header
-
+# Konten Profil di bawah header
 colom1, colom2  = st.columns([3,2])  
 
-with colom1 :
+with colom1:
     st.header("")
-    st.markdown('''#### _:red[hello], my :grey[name] is_''')
+    st.markdown('''#### _:red[Hello], my :grey[name] is_''')
     st.markdown("# Muhammad Muhsin")
-    st.markdown("### :grey[I'am Web Developer]")
+    st.markdown("### :grey[I'm a Software & Web Developer]")
     st.header("")
+    
 with colom2:
     st.empty()
-    img = Image.open("fotoprofil.png")
+    img = Image.open("ftprofil1.webp")
     st.image(img)
     st.empty()
 
 st.markdown('___')
 
-# KOnten
-st.header("Abaut :red[Me]")
-st.markdown('''Halo!, Saya seorang pengembang web yang berfokus pada pembuatan situs web yang responsif 
-            dan mudah digunakan. Dengan pengalaman di berbagai teknologi web, saya berkomitmen untuk 
-            menciptakan pengalaman pengguna yang menyenangkan dan solusi yang efisien untuk berbagai 
-            kebutuhan bisnis. Saya senang bekerja dengan teknologi terkini dan selalu berusaha untuk 
-            mengembangkan keterampilan saya agar dapat memberikan hasil terbaik.
-            
-Keahlian saya meliputi pengembangan front-end dan back-end, serta penerapan desain yang 
-adaptif dan fungsional. Saya juga memiliki pemahaman yang kuat tentang pengembangan aplikasi
-berbasis web yang dapat berjalan lancar di berbagai platform..''')
+# Konten About Me
+st.header("About :red[Me]")
+st.markdown('''Halo! Saya adalah seorang pengembang perangkat lunak yang berfokus pada pembuatan sistem informasi dan aplikasi web yang efisien. Selain berpengalaman dalam pengembangan *front-end* dan *back-end* menggunakan berbagai *framework* modern, saya juga memiliki pengalaman praktis di bidang *Data Science*, *Machine Learning*, dan *Internet of Things* (IoT). 
+
+Saya berkomitmen untuk menghadirkan solusi teknologi yang bermanfaat, mulai dari digitalisasi manajemen institusi pendidikan hingga sistem otomasi perangkat keras. Saya senang mengeksplorasi teknologi terkini dan selalu berusaha memberikan hasil terbaik untuk setiap proyek yang saya kerjakan.''')
 
 st.markdown('___')
 
+# Konten Skills
 st.header(":red[My] Skills")
-
-st.markdown("Halo!, Saya seorang pengembang web yang berfokus pada pembuatan situs web yang responsif dan mudah digunakan. Dengan pengalaman di berbagai teknologi web, saya berkomitmen untuk menciptakan pengalaman pengguna yang menyenangkan dan solusi yang efisien untuk berbagai kebutuhan bisnis. Saya senang bekerja dengan teknologi terkini dan selalu berusaha untuk mengembangkan keterampilan saya agar dapat memberikan hasil terbaik. Keahlian saya meliputi pengembangan front-end dan back-end, serta penerapan desain yang adaptif dan fungsional. Saya juga memiliki pemahaman yang kuat tentang pengembangan aplikasi berbasis web yang dapat berjalan lancar di berbagai platform..")
-
-
+st.markdown("""
+- **Web Development & Server**: PHP, Laravel, Node.js, Streamlit, HTML/CSS. Berpengalaman mengelola server (Armbian, aaPanel, Apache, Nginx) dan *database* (Supabase).
+- **Data Science & Machine Learning**: Python, Pandas. Menguasai implementasi algoritma seperti Naïve Bayes, K-Nearest Neighbors (KNN), Random Forest, dan Support Vector Machine (SVM).
+- **IoT & Electronics**: C++, Arduino, pemrograman mikrokontroler ESP32, serta perakitan dan konfigurasi modul *hardware* elektronika.
+""")
 
 st.markdown('___')
-# Menampilkan judul utama
+
+# Konten Projects
 st.header("Pro:red[jects]")
 
 # Membuat layout dengan 3 kolom untuk menampilkan proyek secara sejajar
 col1, col2, col3 = st.columns(3)
 
-# Kartu Proyek A
+# Kartu Proyek 1
 with col1:
-    st.button(":red[PROJEC A]")
-    st.write("**Description**: A simple web app built using Flask for task management. The app allows users to add, remove, and update tasks.")
+    st.button(":red[Sistem Manajemen Pesantren]")
+    st.write("**Siponpes & Web Al-Miftah**: Pengembangan *student management system* terintegrasi dan situs web profil untuk pondok pesantren menggunakan arsitektur Laravel dan basis data Supabase.")
     
-# Kartu Proyek B
+# Kartu Proyek 2
 with col2:
-    st.button(":red[PROJEC B]")
-    st.write("**Description**: A data analysis project utilizing Python and Pandas. This project analyzes sales data to uncover trends and insights.")
+    st.button(":red[Machine Learning & AI]")
+    st.write("**Sistem Prediksi & Rekomendasi**: Implementasi *Machine Learning* menggunakan Python untuk sistem prediksi kelulusan mahasiswa dengan Naïve Bayes dan sistem rekomendasi jurusan menggunakan Random Forest.")
     
-# Kartu Proyek C
+# Kartu Proyek 3
 with col3:
-    st.button(":red[PROJEC C]")
-    st.write("**Description**: An e-commerce site built with Django. This site includes a product catalog, shopping cart, and checkout functionality.")
+    st.button(":red[Otomasi Tarhim IoT]")
+    st.write("**Sistem Tarhim Otomatis**: Rancang bangun pemutar tarhim prabuh terjadwal otomatis menggunakan mikrokontroler ESP32, DFPlayer Mini, dan modul *relay* untuk mengontrol amplifier.")
+    
 st.markdown('___')
 
-
-
-# Fungsi untuk membuka URL saat ikon ditekan
+# Konten Contact
 st.header("Contact")
 
 # URL yang ingin dibuka
-kolom1, kolom2, kolom3 =st.columns([1,1,1])
+kolom1, kolom2, kolom3 = st.columns([1,1,1])
 
-# Tombol link sederhana yang disamarkan
 with kolom1:
     img = Image.open("instagram.png")
-    st.image(img, width= 60)
-    st.write(f"[:red[Instangram]](https://www.instagram.com/mad_muhsin/)")
-# Tombol link sederhana yang disamarkan
-with kolom2:
-    img = Image.open("dribbble.png")
     st.image(img, width=60)
-    st.write(f"[:red[facebook]](https://www.example.com)")
+    st.write("[:red[Instagram]](https://www.instagram.com/mad_muhsin/)")
 
-# Tombol link sederhana yang disamarkan
-with kolom3:
+with kolom2:
     img = Image.open("facebook.png")
     st.image(img, width=60)
-    st.write(f"[:red[Github]](https://www.example.com)")
+    # Jangan lupa ganti URL di bawah dengan link Facebook Anda yang sebenarnya
+    st.write("[:red[Facebook]](https://www.facebook.com/)")
+
+with kolom3:
+    img = Image.open("dribbble.png") 
+    st.image(img, width=60)
+    # Jangan lupa ganti URL di bawah dengan link Github Anda yang sebenarnya
+    st.write("[:red[Github]](https://github.com/)")
